@@ -18,9 +18,7 @@ function callCurrentWeatherDataAPI(cityName) {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        // console.log(data.coord.lon, data.coord.lat);
         cityName = data.name;
-        // console.log('callCurrentWeatherDataAPI: ', cityName);
         callOneCallAPI(cityName, data.coord.lon, data.coord.lat);
         })
     .catch(error => {
@@ -102,13 +100,10 @@ function displaySearchHistory(cityName, initialStart) {
 
 function savePreviousData(cityName) {
     tempItem = JSON.parse(localStorage.getItem('searchHistory'))
-    // console.log('showing TempItem: ', tempItem);
     if (tempItem != null) {
-        // console.log('adding new item: ', tempItem.concat(cityName));
         localStorage.setItem('searchHistory', JSON.stringify(tempItem.concat(cityName)))
     } else {
         tempArr = [cityName];
-        // console.log('else saving: '. tempArr);
         localStorage.setItem('searchHistory', JSON.stringify(tempArr))
     }
 }
