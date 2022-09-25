@@ -39,11 +39,12 @@ THEN I am again presented with current and future conditions for that city
 - Created API call functions to get data for current data
 - Created function to display 5 day forecast
 - Display of UV background text change color depending on value
-- Functions to display search history
-- Functions to store to local storage
-- Functions to display history when site reloads
+- Created functions to display search history
+- Created functions to store to local storage
+- Created functions to display history when site reloads
 
 ## Description
+Users can type the name of a city in the world and be able to search for the city's current weather conditions as well as a 5-day forecast. Cities you have previously selected would be displayed underneath the search bar so the user could revisit the information again.
 
 ## Final Product
 
