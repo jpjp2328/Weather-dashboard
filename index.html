@@ -26,6 +26,35 @@
             <div class="row ml-1 mr-1" id="searchHistory">
             </div>
         </div>
+
+        <!--City information container -->
+        <div class="col-md-9 col-sm pl-sm-5 pt-sm-3" id="cityInfoContainer" style="display: none;">
+            <!--Current weather info -->
+            <div class="row pl-2 pt-1 mr-3" style="border:1px solid">
+                <div class="col-12" id="currentWeatherContainer">
+                    <div class="row">
+                        <h1>
+                            <span id="currentWeatherName">City name here</span>
+                            <span id="currentWeatherDate">(00/00/0000)</span>
+                        </h1>
+                        <img id="currentWeatherIcon" src="" alt="city weather icon">
+                    </div>
+                    <p class="row">Temp: <span id="currentWeatherTemp">00.00</span>°C</p>
+                    <p class="row">Wind: <span id="currentWeatherWind">00.00</span>m/s</p>
+                    <p class="row">Humidity: <span id="currentWeatherHumidity">00</span>%</p>
+                    <p class="row">UV Index: <span id="currentWeatherUV">00.00</span></p>
+                </div>
+            </div>
+            <!--5 day forecast -->
+            <div class="row mt-4 mr-3">
+                <div class="col-12" id="dashboardContainer">
+                    <h2 class="row">5-Day Forecast:</h2>
+                    <div id="forecastContainer" class="d-flex justify-content-between">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
