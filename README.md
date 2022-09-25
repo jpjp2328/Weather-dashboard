@@ -37,9 +37,16 @@ THEN I am again presented with current and future conditions for that city
 
 ## Javascript
 - Created API call functions to get data for current data
+- Created function to display 5 day forecast
+- Functions to display search history
+- Functions to store to local storage
+- Functions to display history when site reloads
 
 ## Description
 
 ## Final Product
+
+- Link
+- Screenshot
 
 

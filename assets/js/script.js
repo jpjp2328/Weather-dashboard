@@ -54,6 +54,22 @@ function displayCurrentWeather(cityName, currentWeather) {
     $('#cityInfoContainer').css('display', 'block')
 }
 
+function displayWeekForecast(forecastData) {
+
+    forecastContainer.html('');
+    for (let index = 1; index <= 5; index++) {
+        var divEl = $(`
+        <div class="foreCastCard">
+        <p style="font-weight: 800">${moment().clone().add(index,'days').format("M/D/YYYY")}</p>
+        <img src="http://openweathermap.org/img/wn/${forecastData[index].weather[0].icon}.png" alt="forecast icon">
+        <p>Temp: ${forecastData[index].temp.day}°C</p>
+        <p>Wind: ${forecastData[index].wind_speed}m/s</p>
+        <p>Humidity: ${forecastData[index].humidity}%</p>
+        </div>`)
+        divEl.appendTo(forecastContainer)
+    }
+}
+
 // function to initialise events once page loads
 function init() { 
     searchFormEl.submit(searchInput)
