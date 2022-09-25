@@ -20,6 +20,7 @@ function callCurrentWeatherDataAPI(cityName) {
     .then(data => {
         cityName = data.name;
         callOneCallAPI(cityName, data.coord.lon, data.coord.lat);
+        displaySearchHistory(cityName,false);
         })
     .catch(error => {
         console.error('Error:', error);
@@ -62,6 +63,7 @@ function displayCurrentWeather(cityName, currentWeather) {
 
 }
 
+// Function to display 5 day forecast for selected city
 function displayWeekForecast(forecastData) {
 
     forecastContainer.html('');
