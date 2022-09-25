@@ -52,6 +52,16 @@ function displayCurrentWeather(cityName, currentWeather) {
     $('#currentWeatherUV').html(currentWeather.uvi) //uv index
 
     $('#cityInfoContainer').css('display', 'block')
+
+    // uv index colour change depending on value
+    if (currentWeather.uvi > 6) {
+        $('#currentWeatherUV').css('background', '#cc0000')
+    } else if (currentWeather.uvi > 4) {
+        $('#currentWeatherUV').css('background', '#ffcc00')
+    } else {
+        $('#currentWeatherUV').css('background', '#33cc33')
+    }
+
 }
 
 function displayWeekForecast(forecastData) {

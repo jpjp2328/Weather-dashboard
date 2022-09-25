@@ -38,6 +38,7 @@ THEN I am again presented with current and future conditions for that city
 ## Javascript
 - Created API call functions to get data for current data
 - Created function to display 5 day forecast
+- Display of UV background text change color depending on value
 - Functions to display search history
 - Functions to store to local storage
 - Functions to display history when site reloads
