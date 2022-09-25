@@ -48,7 +48,6 @@ Users can type the name of a city in the world and be able to search for the cit
 
 ## Final Product
 
-- Link
-- Screenshot
+![](assets/images/screenshot.png)
 
-
+- http://jpjp2328.github.io/Weather-dashboard
