@@ -28,11 +28,18 @@ THEN I am again presented with current and future conditions for that city
 - Drew out wire frame to decide the formatting and layout of the webpage
 - Created Html/js/css asset files and folders
 - Utilizing Third party Api's in order to obtain weather information (https://openweathermap.org/)
-- Created an account in order to obtain an API key (4b362f22b60aa97a19cd2ca3d70f0ef6)
+- Created an account in order to obtain an API key 
 
 ## HTML 
 - Created HTML file including a Header, side bar (search and history) and an information container (hidden using display:none)
 - Used bootstrap for styling and formatting 
 - Included link to bootstrap, Jquery/moments (for dates) and script
+
+## Javascript
+- Created API call functions to get data for current data
+
+## Description
+
+## Final Product
 
 
