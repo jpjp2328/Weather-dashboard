@@ -30,3 +30,9 @@ THEN I am again presented with current and future conditions for that city
 - Utilizing Third party Api's in order to obtain weather information (https://openweathermap.org/)
 - Created an account in order to obtain an API key (4b362f22b60aa97a19cd2ca3d70f0ef6)
 
+## HTML 
+- Created HTML file including a Header, side bar (search and history) and an information container (hidden using display:none)
+- Used bootstrap for styling and formatting 
+- Included link to bootstrap, Jquery/moments (for dates) and script
+
+
