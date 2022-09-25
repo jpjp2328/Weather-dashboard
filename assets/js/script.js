@@ -80,9 +80,52 @@ function displayWeekForecast(forecastData) {
     }
 }
 
+// Function for Search history using local storage
+function displaySearchHistory(cityName, initialStart) {
+
+    var matchFound = false;
+    $('#searchHistory').children('').each(function(i) {
+        if (cityName == $(this).text()) {
+            matchFound = true;
+            return;
+        }
+    });
+    if (matchFound) {return;}
+
+    var buttonEl = $(`<button type="button" class="col-12 mt-3 btn btn-secondary">${cityName}</button>`)
+    buttonEl.on('click', previousButtonClick);
+    buttonEl.prependTo(searchHistoryEl);
+
+    if (!initialStart) {savePreviousData(cityName)};
+}
+
+
+function savePreviousData(cityName) {
+    tempItem = JSON.parse(localStorage.getItem('searchHistory'))
+    // console.log('showing TempItem: ', tempItem);
+    if (tempItem != null) {
+        // console.log('adding new item: ', tempItem.concat(cityName));
+        localStorage.setItem('searchHistory', JSON.stringify(tempItem.concat(cityName)))
+    } else {
+        tempArr = [cityName];
+        // console.log('else saving: '. tempArr);
+        localStorage.setItem('searchHistory', JSON.stringify(tempArr))
+    }
+}
+
+function previousButtonClick(event) {
+    callCurrentWeatherDataAPI(event.target.innerHTML)
+}
+
 // function to initialise events once page loads
 function init() { 
     searchFormEl.submit(searchInput)
+    tempArr = JSON.parse(localStorage.getItem('searchHistory'))
+    if (tempArr != null){
+        for (let index = 0; index < tempArr.length; index++) {
+            displaySearchHistory(tempArr[index], true)
+        }
+    }
 }
 
 init()
