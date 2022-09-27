@@ -96,6 +96,9 @@ function displaySearchHistory(cityName, initialStart) {
     buttonEl.on('click', previousButtonClick);
     buttonEl.prependTo(searchHistoryEl);
 
+    var clearHistoryBtn = $('#clearHistoryBtn')
+    clearHistoryBtn.on('click',clearLocalStorage)
+
     if (!initialStart) {savePreviousData(cityName)};
 }
 
@@ -112,6 +115,18 @@ function savePreviousData(cityName) {
 
 function previousButtonClick(event) {
     callCurrentWeatherDataAPI(event.target.innerHTML)
+}
+
+// Clear History Function
+
+function clearLocalStorage() {
+
+    var searchHistoryEl = $('#searchHistory');
+  
+    localStorage.removeItem("searchHistory");
+    searchHistoryEl.innerHTML = '';
+  
+    return;
 }
 
 // function to initialise events once page loads
